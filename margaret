@@ -1,0 +1,3688 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Margaret Lawson - Book Marketing & Author Visibility Expert. Helping authors get seen, get known, and build thriving author careers.">
+    <meta name="keywords" content="book marketing, author visibility, author branding, book launch strategy, Margaret Lawson">
+    <meta name="author" content="Margaret Lawson">
+    <title>Margaret Lawson | Book Marketing & Author Visibility Expert</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        /* ============================================
+           GLOBAL STYLES & RESET
+        ============================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-navy: #1a1a4e;
+            --secondary-gold: #c8a951;
+            --gold-light: #d4b96c;
+            --gold-dark: #a88a3d;
+            --accent-purple: #4a1a6b;
+            --purple-light: #6b3a8a;
+            --dark-bg: #0d0d0d;
+            --darker-bg: #050505;
+            --charcoal: #1a1a1a;
+            --light-bg: #faf8f5;
+            --cream: #f5f0e8;
+            --warm-white: #fdfcfa;
+            --text-light: #f0ece4;
+            --text-dark: #2d2d2d;
+            --text-muted: #8a8a8a;
+            --text-gold: #c8a951;
+            --rose: #e8b4b8;
+            --rose-light: #f0d0d3;
+            --gradient-1: linear-gradient(135deg, #1a1a4e 0%, #4a1a6b 100%);
+            --gradient-2: linear-gradient(135deg, #0d0d0d 0%, #1a1a4e 50%, #4a1a6b 100%);
+            --gradient-3: linear-gradient(135deg, #c8a951 0%, #d4b96c 50%, #e8d5a0 100%);
+            --gradient-gold: linear-gradient(135deg, #c8a951 0%, #a88a3d 100%);
+            --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.1);
+            --shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.15);
+            --shadow-strong: 0 15px 60px rgba(0, 0, 0, 0.3);
+            --shadow-gold: 0 4px 20px rgba(200, 169, 81, 0.3);
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            color: var(--text-dark);
+            background-color: var(--dark-bg);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            line-height: 1.3;
+        }
+
+        h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.8;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s ease;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-padding-large {
+            padding: 120px 0;
+        }
+
+        /* ============================================
+           PRELOADER
+        ============================================ */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 99999;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader-content {
+            text-align: center;
+        }
+
+        .preloader-content h2 {
+            color: var(--secondary-gold);
+            font-size: 2rem;
+            letter-spacing: 8px;
+            text-transform: uppercase;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .preloader-line {
+            width: 60px;
+            height: 2px;
+            background: var(--secondary-gold);
+            margin: 20px auto;
+            animation: expandLine 1.5s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.4; }
+            50% { opacity: 1; }
+        }
+
+        @keyframes expandLine {
+            0%, 100% { width: 60px; }
+            50% { width: 120px; }
+        }
+
+        /* ============================================
+           NAVIGATION
+        ============================================ */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            padding: 20px 0;
+            transition: all 0.4s ease;
+            background: transparent;
+        }
+
+        .navbar.scrolled {
+            background: rgba(13, 13, 13, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 12px 0;
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .nav-logo .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .nav-logo .tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--secondary-gold);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .nav-cta-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--dark-bg) !important;
+            background: var(--gradient-gold);
+            padding: 12px 28px;
+            border-radius: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+        }
+
+        .nav-cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .nav-cta-btn::after {
+            display: none !important;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            z-index: 10000;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        /* ============================================
+           HERO SECTION
+        ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: var(--gradient-2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c8a951' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: var(--secondary-gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 15s infinite ease-in-out;
+        }
+
+        .particle:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; animation-duration: 12s; }
+        .particle:nth-child(2) { top: 20%; left: 80%; animation-delay: 2s; animation-duration: 15s; }
+        .particle:nth-child(3) { top: 60%; left: 20%; animation-delay: 4s; animation-duration: 18s; }
+        .particle:nth-child(4) { top: 40%; left: 70%; animation-delay: 1s; animation-duration: 14s; }
+        .particle:nth-child(5) { top: 80%; left: 40%; animation-delay: 3s; animation-duration: 16s; }
+        .particle:nth-child(6) { top: 30%; left: 50%; animation-delay: 5s; animation-duration: 13s; }
+        .particle:nth-child(7) { top: 70%; left: 85%; animation-delay: 2.5s; animation-duration: 17s; }
+        .particle:nth-child(8) { top: 50%; left: 5%; animation-delay: 1.5s; animation-duration: 14s; }
+        .particle:nth-child(9) { top: 90%; left: 60%; animation-delay: 3.5s; animation-duration: 15s; }
+        .particle:nth-child(10) { top: 15%; left: 35%; animation-delay: 4.5s; animation-duration: 16s; }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0.2; }
+            25% { transform: translateY(-30px) translateX(15px); opacity: 0.5; }
+            50% { transform: translateY(-15px) translateX(-10px); opacity: 0.3; }
+            75% { transform: translateY(-40px) translateX(20px); opacity: 0.4; }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-pre-headline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+            display: inline-block;
+            padding: 8px 25px;
+            border: 1px solid rgba(200, 169, 81, 0.3);
+            border-radius: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--secondary-gold);
+            display: block;
+        }
+
+        .hero-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: rgba(240, 236, 228, 0.8);
+            margin-bottom: 20px;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.8;
+        }
+
+        .hero-description {
+            font-size: 1rem;
+            color: rgba(240, 236, 228, 0.6);
+            margin-bottom: 45px;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            background: var(--gradient-gold);
+            padding: 16px 40px;
+            border-radius: 50px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(200, 169, 81, 0.4);
+        }
+
+        .btn-secondary {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            background: transparent;
+            padding: 16px 40px;
+            border-radius: 50px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            border: 1px solid var(--secondary-gold);
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: var(--secondary-gold);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+
+        .hero-scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+            animation: bounce 2s infinite;
+        }
+
+        .hero-scroll-indicator span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .hero-scroll-indicator .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, var(--secondary-gold), transparent);
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(10px); }
+        }
+
+        /* ============================================
+           CREDIBILITY BAR
+        ============================================ */
+        .credibility-bar {
+            background: var(--charcoal);
+            padding: 50px 0;
+            border-top: 1px solid rgba(200, 169, 81, 0.1);
+            border-bottom: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .credibility-bar h3 {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 35px;
+        }
+
+        .credibility-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .credibility-item {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(200, 169, 81, 0.6);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 10px 20px;
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .credibility-item:hover {
+            border-color: rgba(200, 169, 81, 0.4);
+            color: var(--secondary-gold);
+        }
+
+        /* ============================================
+           SECTION HEADERS
+        ============================================ */
+        .section-header {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 70px;
+        }
+
+        .section-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .section-header .decorative-line {
+            width: 60px;
+            height: 2px;
+            background: var(--gradient-gold);
+            margin: 25px auto;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-muted);
+        }
+
+        /* Dark section header */
+        .dark-section .section-header h2 {
+            color: var(--text-light);
+        }
+
+        .dark-section .section-header p {
+            color: rgba(240, 236, 228, 0.6);
+        }
+
+        /* Light section header */
+        .light-section .section-header h2 {
+            color: var(--primary-navy);
+        }
+
+        .light-section .section-header p {
+            color: var(--text-dark);
+            opacity: 0.7;
+        }
+
+        /* ============================================
+           PROBLEM SECTION
+        ============================================ */
+        .problem-section {
+            background: var(--light-bg);
+            position: relative;
+        }
+
+        .problem-intro {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            text-align: center;
+        }
+
+        .problem-intro p {
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.9;
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        .problem-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .problem-card:hover::before {
+            opacity: 1;
+        }
+
+        .problem-card .problem-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .problem-card h3 {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.75;
+            line-height: 1.8;
+        }
+
+        .problem-closing {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background: var(--gradient-1);
+            border-radius: 15px;
+            color: var(--text-light);
+        }
+
+        .problem-closing p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: rgba(240, 236, 228, 0.9);
+        }
+
+        /* ============================================
+           TRANSFORMATION SECTION
+        ============================================ */
+        .transformation-section {
+            background: var(--gradient-2);
+            position: relative;
+        }
+
+        .transformation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .transformation-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 15px;
+            padding: 35px;
+            transition: all 0.4s ease;
+        }
+
+        .transformation-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(200, 169, 81, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .transformation-card .transform-icon {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .transformation-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            margin-bottom: 12px;
+        }
+
+        .transformation-card p {
+            font-size: 0.95rem;
+            color: rgba(240, 236, 228, 0.7);
+            line-height: 1.7;
+        }
+
+        .transformation-closing {
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .transformation-closing p {
+            font-size: 1.1rem;
+            color: rgba(240, 236, 228, 0.8);
+            font-style: italic;
+            font-family: 'Cormorant Garamond', serif;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           ABOUT SECTION
+        ============================================ */
+        .about-section {
+            background: var(--light-bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: var(--gradient-1);
+            border-radius: 15px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-gold);
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-image-placeholder i {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            opacity: 0.8;
+        }
+
+        .about-image-placeholder span {
+            font-size: 0.75rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        .about-image-frame {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid var(--secondary-gold);
+            border-radius: 15px;
+            z-index: -1;
+        }
+
+        .about-text h2 {
+            font-size: 2.5rem;
+            color: var(--primary-navy);
+            margin-bottom: 10px;
+        }
+
+        .about-text .about-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.2rem;
+            color: var(--secondary-gold);
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .about-text p {
+            font-size: 1rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            margin-bottom: 20px;
+            line-height: 1.9;
+        }
+
+        .about-philosophy {
+            background: var(--cream);
+            padding: 30px;
+            border-radius: 10px;
+            margin: 30px 0;
+            border-left: 3px solid var(--secondary-gold);
+        }
+
+        .about-philosophy p {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            font-style: italic;
+            color: var(--primary-navy);
+            opacity: 1;
+        }
+
+        .about-values {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .about-value-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .about-value-item i {
+            color: var(--secondary-gold);
+            font-size: 0.9rem;
+        }
+
+        .about-value-item span {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+        }
+
+        .about-expertise {
+            margin-top: 40px;
+        }
+
+        .about-expertise h3 {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 20px;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .expertise-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--primary-navy);
+            background: white;
+            padding: 8px 18px;
+            border-radius: 25px;
+            border: 1px solid rgba(26, 26, 78, 0.1);
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .expertise-tag:hover {
+            background: var(--primary-navy);
+            color: var(--secondary-gold);
+        }
+
+        /* ============================================
+           SERVICES SECTION
+        ============================================ */
+        .services-section {
+            background: var(--dark-bg);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--charcoal);
+            border-radius: 15px;
+            padding: 45px;
+            border: 1px solid rgba(200, 169, 81, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gradient-gold);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: rgba(200, 169, 81, 0.3);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        .service-card .service-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(200, 169, 81, 0.1);
+            position: absolute;
+            top: 20px;
+            right: 25px;
+        }
+
+        .service-card .service-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .service-card .service-tagline {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1rem;
+            color: var(--secondary-gold);
+            font-style: italic;
+            margin-bottom: 18px;
+        }
+
+        .service-card p {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.6);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .service-features li {
+            font-size: 0.85rem;
+            color: rgba(240, 236, 228, 0.7);
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-gold);
+            font-size: 0.6rem;
+        }
+
+        .service-card .service-ideal {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .service-card .service-ideal h5 {
+            font-size: 0.75rem;
+            color: var(--secondary-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .service-card .service-ideal p {
+            font-size: 0.85rem;
+            margin-bottom: 0;
+        }
+
+        /* Full width service card */
+        .service-card-full {
+            grid-column: 1 / -1;
+        }
+
+        /* ============================================
+           PROCESS SECTION
+        ============================================ */
+        .process-section {
+            background: var(--light-bg);
+        }
+
+        .process-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .process-timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary-gold), var(--accent-purple));
+        }
+
+        .process-step {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 50px;
+            align-items: flex-start;
+            position: relative;
+        }
+
+        .process-step:last-child {
+            margin-bottom: 0;
+        }
+
+        .process-number {
+            width: 100px;
+            min-width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-gold);
+            box-shadow: var(--shadow-medium);
+            z-index: 2;
+            position: relative;
+        }
+
+        .process-step-content {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: var(--shadow-soft);
+            flex: 1;
+            transition: all 0.3s ease;
+        }
+
+        .process-step-content:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .process-step-content .step-icon {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .process-step-content h3 {
+            font-size: 1.3rem;
+            color: var(--primary-navy);
+            margin-bottom: 5px;
+        }
+
+        .process-step-content .step-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.05rem;
+            color: var(--secondary-gold);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        .process-step-content p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.75;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           RESULTS SECTION
+        ============================================ */
+        .results-section {
+            background: var(--gradient-2);
+            position: relative;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .result-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(200, 169, 81, 0.3);
+            transform: translateY(-3px);
+        }
+
+        .result-card .result-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .result-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .result-card p {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.7);
+            line-height: 1.7;
+        }
+
+        .results-commitment {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 40px;
+            background: rgba(200, 169, 81, 0.08);
+            border: 1px solid rgba(200, 169, 81, 0.2);
+            border-radius: 15px;
+        }
+
+        .results-commitment h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-gold);
+            margin-bottom: 15px;
+        }
+
+        .results-commitment p {
+            font-size: 1rem;
+            color: rgba(240, 236, 228, 0.8);
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           TESTIMONIALS SECTION
+        ============================================ */
+        .testimonials-section {
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .testimonial-card .quote-icon {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            color: var(--secondary-gold);
+            opacity: 0.3;
+            line-height: 1;
+            margin-bottom: 10px;
+        }
+
+        .testimonial-card .stars {
+            color: var(--secondary-gold);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            letter-spacing: 3px;
+        }
+
+        .testimonial-card p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.8;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .testimonial-author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-gold);
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .testimonial-author-info h5 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--primary-navy);
+        }
+
+        .testimonial-author-info span {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* ============================================
+           WHY CHOOSE SECTION
+        ============================================ */
+        .why-section {
+            background: var(--dark-bg);
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .why-card {
+            display: flex;
+            gap: 20px;
+            padding: 30px;
+            background: var(--charcoal);
+            border-radius: 12px;
+            border: 1px solid rgba(200, 169, 81, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            border-color: rgba(200, 169, 81, 0.2);
+            transform: translateX(5px);
+        }
+
+        .why-card .why-icon {
+            font-size: 1.5rem;
+            min-width: 40px;
+        }
+
+        .why-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            margin-bottom: 8px;
+        }
+
+        .why-card p {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.6);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           FAQ SECTION
+        ============================================ */
+        .faq-section {
+            background: var(--light-bg);
+        }
+
+        .faq-container {
+            max-width: 850px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .faq-question {
+            padding: 25px 30px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(200, 169, 81, 0.03);
+        }
+
+        .faq-question h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--primary-navy);
+            flex: 1;
+        }
+
+        .faq-question .faq-toggle {
+            font-size: 1.2rem;
+            color: var(--secondary-gold);
+            transition: transform 0.3s ease;
+            min-width: 25px;
+            text-align: center;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .faq-answer-content {
+            padding: 0 30px 25px;
+        }
+
+        .faq-answer-content p {
+            font-size: 0.95rem;
+            color: var(--text-dark);
+            opacity: 0.75;
+            line-height: 1.8;
+        }
+
+        /* ============================================
+           RESOURCES SECTION
+        ============================================ */
+        .resources-section {
+            background: var(--gradient-2);
+        }
+
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.4s ease;
+        }
+
+        .resource-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(200, 169, 81, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .resource-card .resource-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .resource-card h3 {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .resource-card p {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.6);
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .resource-card .btn-resource {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: var(--gradient-gold);
+            color: var(--dark-bg);
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .resource-card .btn-resource:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ============================================
+           BLOG SECTION
+        ============================================ */
+        .blog-section {
+            background: var(--cream);
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .blog-card-image {
+            height: 200px;
+            background: var(--gradient-1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blog-card-image i {
+            font-size: 3rem;
+            color: rgba(200, 169, 81, 0.3);
+        }
+
+        .blog-card-content {
+            padding: 30px;
+        }
+
+        .blog-card-content .blog-category {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+
+        .blog-card-content h3 {
+            font-size: 1.1rem;
+            color: var(--primary-navy);
+            margin-bottom: 12px;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
+        .blog-card-content p {
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            opacity: 0.7;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        .blog-card-content .read-more {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .blog-card-content .read-more:hover {
+            gap: 10px;
+        }
+
+        .blog-view-all {
+            text-align: center;
+        }
+
+        /* ============================================
+           CONTACT SECTION
+        ============================================ */
+        .contact-section {
+            background: var(--dark-bg);
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+        }
+
+        .contact-info {
+            padding: 20px 0;
+        }
+
+        .contact-info h3 {
+            font-size: 2rem;
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+
+        .contact-info .contact-subtitle {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.15rem;
+            color: var(--secondary-gold);
+            font-style: italic;
+            margin-bottom: 25px;
+        }
+
+        .contact-info > p {
+            font-size: 0.95rem;
+            color: rgba(240, 236, 228, 0.6);
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .contact-expectations {
+            margin-bottom: 35px;
+        }
+
+        .contact-expectations h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .contact-expectations ul {
+            list-style: none;
+        }
+
+        .contact-expectations li {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.7);
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .contact-expectations li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-gold);
+            font-weight: bold;
+        }
+
+        .contact-direct {
+            padding: 30px;
+            background: var(--charcoal);
+            border-radius: 12px;
+            border: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .contact-direct h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .contact-direct-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        .contact-direct-item i {
+            color: var(--secondary-gold);
+            font-size: 1rem;
+            width: 20px;
+        }
+
+        .contact-direct-item span {
+            font-size: 0.9rem;
+            color: rgba(240, 236, 228, 0.7);
+        }
+
+        .contact-direct-item a {
+            color: rgba(240, 236, 228, 0.7);
+        }
+
+        .contact-direct-item a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .contact-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .contact-social a {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(200, 169, 81, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-gold);
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+        }
+
+        .contact-social a:hover {
+            background: var(--secondary-gold);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+
+        .contact-form-wrapper {
+            background: var(--charcoal);
+            border-radius: 15px;
+            padding: 45px;
+            border: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .contact-form-wrapper h3 {
+            font-size: 1.5rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--secondary-gold);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 8px;
+            color: var(--text-light);
+            font-family: 'Lato', sans-serif;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            outline: none;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(240, 236, 228, 0.3);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary-gold);
+            box-shadow: 0 0 15px rgba(200, 169, 81, 0.1);
+        }
+
+        .form-group select {
+            appearance: none;
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: var(--charcoal);
+            color: var(--text-light);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: var(--gradient-gold);
+            color: var(--dark-bg);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-top: 10px;
+        }
+
+        .form-submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(200, 169, 81, 0.3);
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        .footer {
+            background: var(--darker-bg);
+            padding: 80px 0 30px;
+            border-top: 1px solid rgba(200, 169, 81, 0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 50px;
+        }
+
+        .footer-about .footer-logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 2px;
+            margin-bottom: 5px;
+        }
+
+        .footer-about .footer-logo-tagline {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            color: var(--text-muted);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            font-size: 0.85rem;
+            color: rgba(240, 236, 228, 0.5);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 10px;
+        }
+
+        .footer-social a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(200, 169, 81, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--secondary-gold);
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background: var(--secondary-gold);
+            color: var(--dark-bg);
+        }
+
+        .footer-column h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--secondary-gold);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 25px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            font-size: 0.85rem;
+            color: rgba(240, 236, 228, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .footer-column ul li a:hover {
+            color: var(--secondary-gold);
+            padding-left: 5px;
+        }
+
+        .footer-newsletter {
+            margin-top: 20px;
+        }
+
+        .footer-newsletter p {
+            font-size: 0.8rem;
+            color: rgba(240, 236, 228, 0.5);
+            margin-bottom: 12px;
+        }
+
+        .footer-newsletter-form {
+            display: flex;
+            gap: 8px;
+        }
+
+        .footer-newsletter-form input {
+            flex: 1;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(200, 169, 81, 0.15);
+            border-radius: 25px;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            outline: none;
+        }
+
+        .footer-newsletter-form input:focus {
+            border-color: var(--secondary-gold);
+        }
+
+        .footer-newsletter-form button {
+            padding: 10px 20px;
+            background: var(--gradient-gold);
+            border: none;
+            border-radius: 25px;
+            color: var(--dark-bg);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .footer-newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            border-top: 1px solid rgba(200, 169, 81, 0.08);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-bottom p {
+            font-size: 0.75rem;
+            color: rgba(240, 236, 228, 0.3);
+        }
+
+        .footer-bottom-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-bottom-links a {
+            font-size: 0.75rem;
+            color: rgba(240, 236, 228, 0.3);
+        }
+
+        .footer-bottom-links a:hover {
+            color: var(--secondary-gold);
+        }
+
+        /* ============================================
+           BACK TO TOP BUTTON
+        ============================================ */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--gradient-gold);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--dark-bg);
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 999;
+            border: none;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        /* ============================================
+           ANIMATIONS
+        ============================================ */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ============================================
+           RESPONSIVE DESIGN
+        ============================================ */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .results-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .resources-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .section-padding {
+                padding: 70px 0;
+            }
+
+            .nav-links {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: rgba(13, 13, 13, 0.98);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                z-index: 9998;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                letter-spacing: 3px;
+            }
+
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            .problems-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .transformation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .process-timeline::before {
+                left: 25px;
+            }
+
+            .process-number {
+                width: 50px;
+                min-width: 50px;
+                height: 50px;
+                font-size: 1rem;
+            }
+
+            .process-step {
+                gap: 20px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form-wrapper {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-pre-headline {
+                font-size: 0.7rem;
+                letter-spacing: 3px;
+            }
+
+            .section-header h2 {
+                font-size: 1.7rem;
+            }
+
+            .problem-card {
+                padding: 25px;
+            }
+
+            .service-card {
+                padding: 30px;
+            }
+
+            .testimonial-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         PRELOADER
+    ============================================ -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <h2>Margaret Lawson</h2>
+            <div class="preloader-line"></div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION
+    ============================================ -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="name">Margaret Lawson</span>
+                <span class="tagline">Book Marketing & Author Visibility Expert</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact" class="nav-cta-btn">Free Strategy Call</a></li>
+            </ul>
+            <div class="mobile-menu-btn" id="mobileMenuBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+    ============================================ -->
+    <section class="hero" id="home">
+        <div class="hero-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="hero-content">
+            <span class="hero-pre-headline">Book Marketing & Author Visibility Expert</span>
+            <h1>Your Book Has the Power to Change Lives <span>— But Only If People Know It Exists</span></h1>
+            <p class="hero-subtitle">"I'm Margaret Lawson, and I help authors go from invisible to visible through proven book marketing strategies, powerful author branding, and strategic visibility campaigns."</p>
+            <p class="hero-description">Whether you're a first-time author preparing for your debut launch, a seasoned writer looking to reignite your career, or a thought leader using your book to build your business — I have the strategies, the expertise, and the passion to help you succeed. Your book deserves to be read. Your message deserves to be heard. Let's make it happen — together.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn-primary">Book Your Free Strategy Call</a>
+                <a href="#services" class="btn-secondary">Explore My Services</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CREDIBILITY BAR
+    ============================================ -->
+    <section class="credibility-bar">
+        <div class="container">
+            <h3>Trusted By Authors Across Multiple Genres & Publishing Paths</h3>
+            <div class="credibility-logos">
+                <div class="credibility-item">Fiction Authors</div>
+                <div class="credibility-item">Non-Fiction Authors</div>
+                <div class="credibility-item">Self-Published</div>
+                <div class="credibility-item">Traditionally Published</div>
+                <div class="credibility-item">First-Time Authors</div>
+                <div class="credibility-item">Business Authors</div>
+                <div class="credibility-item">Memoir Authors</div>
+                <div class="credibility-item">Children's Book Authors</div>
+                <div class="credibility-item">Health & Wellness</div>
+                <div class="credibility-item">Faith-Based Authors</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROBLEM SECTION
+    ============================================ -->
+    <section class="problem-section light-section section-padding" id="problems">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">The Challenge</span>
+                <h2>The Hard Truth About Being an Author Today</h2>
+                <div class="decorative-line"></div>
+                <p>Writing your book was the easy part. Now comes the real challenge.</p>
+            </div>
+
+            <div class="problem-intro fade-in">
+                <p>Here's something they don't teach you in writing classes, and your publisher probably won't tell you: Writing a great book is only 20% of the battle. The other 80%? That's marketing. And without a solid marketing strategy, even the most brilliant, life-changing book will struggle to find its audience.</p>
+            </div>
+
+            <div class="problems-grid">
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">👻</div>
+                    <h3>The Invisibility Crisis</h3>
+                    <p>Over 4 million books are published every year — more than 11,000 per day. Without a strategic visibility plan, your book becomes one of millions — undiscovered and unread. This isn't a reflection of your talent. It's the reality of today's publishing landscape.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">📱</div>
+                    <h3>The Social Media Trap</h3>
+                    <p>You post every day. You share quotes. You ask people to buy. And nothing happens. Most authors use social media without a clear strategy, without understanding their audience, and without a conversion path. Social media can be powerful — but only when used strategically.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🦗</div>
+                    <h3>The Launch Disaster</h3>
+                    <p>You spent months writing your book. You hit publish. You share the news. You get a small spike in sales. Then silence. A successful book launch isn't about one big day — it's about a strategic campaign that builds momentum before, during, and after launch.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🤯</div>
+                    <h3>The DIY Marketing Nightmare</h3>
+                    <p>YouTube videos, blog posts, Facebook groups — you've tried to piece together a marketing plan from free advice and you're more confused than ever. One expert says TikTok. Another says email. You're overwhelmed and spending more time on marketing than writing.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🪞</div>
+                    <h3>The Branding Blind Spot</h3>
+                    <p>Most authors think marketing is just about selling books. But successful authors understand it's about building a BRAND. Your author brand is what makes readers choose YOUR book. Without a strong brand, you're just another name on a cover.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">💰</div>
+                    <h3>The Revenue Challenge</h3>
+                    <p>Your book isn't generating the income you expected. Sales aren't consistent. What most authors don't realize: the book is often just the starting point. The real opportunities emerge when your book gives you visibility — but that requires strategic marketing.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">😟</div>
+                    <h3>The Confidence Challenge</h3>
+                    <p>You know your book is good and your message matters. But watching other authors succeed while you struggle breeds doubt. Your struggle isn't about your worth — it's about the lack of proper marketing strategy. Every visible author has marketing effort behind them.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🔍</div>
+                    <h3>The Media Mystery</h3>
+                    <p>Other authors are getting featured on blogs, publications, and online platforms. Getting media coverage isn't luck — it's strategy. It requires a compelling story, a polished media kit, targeted pitches, and systematic outreach.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">📧</div>
+                    <h3>The Email List Neglect</h3>
+                    <p>Your email list is the ONLY audience you truly own. Social media algorithms can change tomorrow. But your email list is yours. It's one of the most powerful tools an author can have — yet most authors either don't have one or don't know how to use it.</p>
+                </div>
+                <div class="problem-card fade-in">
+                    <div class="problem-icon">🗺️</div>
+                    <h3>The Long-Term Strategy Gap</h3>
+                    <p>Most authors think about marketing their current book. But the most successful authors build sustainable careers with long-term visibility strategies — systems where each book builds on the last and their brand gets stronger over time.</p>
+                </div>
+            </div>
+
+            <div class="problem-closing fade-in">
+                <p>If any of these problems resonate with you, know this: you are NOT alone. Every author I've worked with has faced at least one of these challenges. And every one of them has a solution. I have the strategies, experience, and passion to help you work through them.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TRANSFORMATION SECTION
+    ============================================ -->
+    <section class="transformation-section dark-section section-padding-large" id="transformation">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">The Possibility</span>
+                <h2>Imagine What Your Author Life Could Look Like</h2>
+                <div class="decorative-line"></div>
+                <p>With the right strategy and support, here's what becomes possible...</p>
+            </div>
+
+            <div class="transformation-grid">
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">🌟</div>
+                    <h4>Your Book Is Reaching Readers Consistently</h4>
+                    <p>Not because of luck, but because of a carefully executed marketing strategy that puts your book in front of the right people. Your Amazon listing is optimized, reviews are growing, and sales are steady.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">🎙️</div>
+                    <h4>You're Gaining Visibility in Your Space</h4>
+                    <p>Media outlets and online platforms are featuring you. You're being recognized as a knowledgeable voice in your field. Opportunities are starting to come to you instead of you chasing them.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">📧</div>
+                    <h4>Your Email List Is Growing</h4>
+                    <p>Engaged subscribers who enjoy your content, look forward to your newsletters, and are excited about your future books. Your list is becoming one of your most valuable assets.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">📱</div>
+                    <h4>Your Social Media Has Purpose</h4>
+                    <p>You're no longer posting randomly. Your content is strategic, engaging, and aligned with your goals. You're building a genuine community of readers who care about your work.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">💡</div>
+                    <h4>New Opportunities Are Emerging</h4>
+                    <p>Your book is opening doors you didn't expect — professional connections, collaboration invitations, media features, and potential revenue streams beyond just royalties.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">🏆</div>
+                    <h4>Your Author Brand Is Taking Shape</h4>
+                    <p>People in your genre or field are beginning to recognize your name. You've positioned yourself thoughtfully, and your brand reflects who you truly are as an author.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">✍️</div>
+                    <h4>You're Planning Your Next Book With Confidence</h4>
+                    <p>Because you have an audience, a platform, and a marketing strategy to support it. No more launch anxiety. Just creative momentum backed by smart marketing.</p>
+                </div>
+                <div class="transformation-card fade-in">
+                    <div class="transform-icon">🌍</div>
+                    <h4>Your Message Is Making an Impact</h4>
+                    <p>Readers are reaching out to tell you how your book affected them. Your work is making a difference — and THAT is why you became an author in the first place.</p>
+                </div>
+            </div>
+
+            <div class="transformation-closing fade-in">
+                <p>"This is the real, tangible result of having the right marketing strategy and the right expert in your corner. I've helped many authors create meaningful progress toward these goals, and I'm ready to help you do the same."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+    ============================================ -->
+    <section class="about-section light-section section-padding-large" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image fade-in-left">
+                    <div class="about-image-placeholder">
+                        <i class="fas fa-user"></i>
+                        <span>Your Photo Here</span>
+                    </div>
+                    <div class="about-image-frame"></div>
+                </div>
+                <div class="about-text fade-in-right">
+                    <span class="section-label">About</span>
+                    <h2>Meet Margaret Lawson</h2>
+                    <p class="about-subtitle">Book Marketing Strategist. Author Visibility Expert. Your Partner in Publishing Success.</p>
+
+                    <p>My journey into book marketing started with a deep, lifelong love of books and a burning desire to help authors share their stories with the world.</p>
+
+                    <p>I've always believed that books have the power to change lives. A single book can shift someone's perspective, heal their pain, ignite their ambition, or transform their entire world. But I also learned early on that even the most powerful books can't create change if nobody reads them.</p>
+
+                    <p>That's the gap I set out to fill. I dedicated my career to mastering every aspect of book marketing — from launch strategy and social media to PR, email marketing, Amazon optimization, and author branding. I studied what successful authors were doing differently. I tested strategies across multiple genres. I invested in my education and built relationships with professionals across the publishing world.</p>
+
+                    <p>I've watched first-time authors build real audiences. I've seen self-published writers create meaningful income from their work. I've helped authors grow their email lists, strengthen their brands, and launch books with confidence and momentum.</p>
+
+                    <p>Every success story started with an author who felt invisible — an author who had a great book but no visibility, who was ready for change but didn't know how. That author might be you right now. And if it is, I'm ready to help.</p>
+
+                    <div class="about-philosophy">
+                        <p>"I believe that every author deserves to be visible. I believe that marketing shouldn't feel sleazy, overwhelming, or inauthentic. I believe in strategies that honor your voice, respect your readers, and deliver real results."</p>
+                    </div>
+
+                    <div class="about-values">
+                        <div class="about-value-item">
+                            <i class="fas fa-bullseye"></i>
+                            <span>Strategy Over Hustle</span>
+                        </div>
+                        <div class="about-value-item">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Innovation & Creativity</span>
+                        </div>
+                        <div class="about-value-item">
+                            <i class="fas fa-handshake"></i>
+                            <span>True Partnership</span>
+                        </div>
+                        <div class="about-value-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Results-Focused</span>
+                        </div>
+                        <div class="about-value-item">
+                            <i class="fas fa-heart"></i>
+                            <span>Genuine Passion</span>
+                        </div>
+                        <div class="about-value-item">
+                            <i class="fas fa-search"></i>
+                            <span>Honesty & Transparency</span>
+                        </div>
+                    </div>
+
+                    <div class="about-expertise">
+                        <h3>Areas of Expertise</h3>
+                        <div class="expertise-tags">
+                            <span class="expertise-tag">Book Marketing Strategy</span>
+                            <span class="expertise-tag">Author Branding</span>
+                            <span class="expertise-tag">Book Launch Campaigns</span>
+                            <span class="expertise-tag">Media Relations & PR</span>
+                            <span class="expertise-tag">Social Media Strategy</span>
+                            <span class="expertise-tag">Email Marketing</span>
+                            <span class="expertise-tag">Amazon Optimization</span>
+                            <span class="expertise-tag">Author Websites</span>
+                            <span class="expertise-tag">Author Coaching</span>
+                            <span class="expertise-tag">Publishing Guidance</span>
+                            <span class="expertise-tag">Book Monetization</span>
+                            <span class="expertise-tag">Marketing Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SERVICES SECTION
+    ============================================ -->
+    <section class="services-section dark-section section-padding-large" id="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Services</span>
+                <h2>Book Marketing & Author Visibility Services</h2>
+                <div class="decorative-line"></div>
+                <p>A complete suite of services designed to help authors at every stage — from first draft to sustained visibility and beyond.</p>
+            </div>
+
+            <div class="services-grid">
+                <!-- Service 1 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">01</span>
+                    <div class="service-icon">📚</div>
+                    <h3>Complete Book Marketing Strategy</h3>
+                    <p class="service-tagline">"Your book deserves a marketing plan as powerful as the words inside it."</p>
+                    <p>A comprehensive, customized marketing strategy covering every aspect of getting your book in front of the right readers. Not a template — YOUR plan, built for YOUR book.</p>
+                    <ul class="service-features">
+                        <li>Genre and market analysis</li>
+                        <li>Target reader identification</li>
+                        <li>Multi-channel marketing strategy</li>
+                        <li>Content marketing plan</li>
+                        <li>Paid advertising strategy</li>
+                        <li>90-day action plan with milestones</li>
+                        <li>Regular check-ins and optimization</li>
+                        <li>Monthly analytics reports</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who want a comprehensive plan with expert guidance. Both new and established authors across all genres.</p>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">02</span>
+                    <div class="service-icon">🌟</div>
+                    <h3>Author Visibility & Personal Branding</h3>
+                    <p class="service-tagline">"Readers don't just buy books — they connect with authors."</p>
+                    <p>Build a powerful personal brand that positions you as a recognized voice in your field. Strategically communicate your authentic story in a way that resonates with ideal readers.</p>
+                    <ul class="service-features">
+                        <li>Brand discovery deep-dive</li>
+                        <li>Unique value proposition development</li>
+                        <li>Brand voice and messaging framework</li>
+                        <li>Visual brand direction</li>
+                        <li>Authority building roadmap</li>
+                        <li>Author bio crafting (multiple versions)</li>
+                        <li>Brand consistency guidelines</li>
+                        <li>Long-term brand evolution strategy</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors building a long-term career who want to be known for more than just one book.</p>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">03</span>
+                    <div class="service-icon">🚀</div>
+                    <h3>Book Launch Strategy</h3>
+                    <p class="service-tagline">"Your launch should be the beginning of your success — not the end."</p>
+                    <p>A comprehensive, multi-phase launch campaign designed to build anticipation, generate buzz, and maximize your book's impact from day one and beyond.</p>
+                    <ul class="service-features">
+                        <li>Pre-launch foundation (3-6 months out)</li>
+                        <li>Launch team recruitment & ARC strategy</li>
+                        <li>Pre-order and cover reveal campaigns</li>
+                        <li>Launch week execution plan</li>
+                        <li>Media outreach and blog tours</li>
+                        <li>Amazon category optimization</li>
+                        <li>Post-launch momentum strategy</li>
+                        <li>Long-term sustainability plan</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>First-time authors launching with confidence and established authors wanting stronger launch results.</p>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">04</span>
+                    <div class="service-icon">📱</div>
+                    <h3>Social Media Marketing for Authors</h3>
+                    <p class="service-tagline">"Stop posting into the void — start using social media with purpose."</p>
+                    <p>Strategic social media marketing that builds your audience, creates genuine connections with readers, and supports your book sales across the platforms that matter most.</p>
+                    <ul class="service-features">
+                        <li>Platform selection and optimization</li>
+                        <li>Instagram, Facebook, TikTok, LinkedIn strategies</li>
+                        <li>90-day content calendar</li>
+                        <li>Content templates and frameworks</li>
+                        <li>Hashtag and keyword strategy</li>
+                        <li>Community building tactics</li>
+                        <li>Growth strategies (organic)</li>
+                        <li>Analytics and optimization</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who feel overwhelmed by social media or are active but not seeing meaningful results.</p>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">05</span>
+                    <div class="service-icon">🎤</div>
+                    <h3>Media & Public Relations for Authors</h3>
+                    <p class="service-tagline">"Get featured. Get known. Build credibility."</p>
+                    <p>Strategic media outreach that gets you featured on relevant platforms, blogs, and publications — building your credibility and introducing your book to new audiences.</p>
+                    <ul class="service-features">
+                        <li>Media readiness assessment</li>
+                        <li>Professional media kit creation</li>
+                        <li>Press release writing</li>
+                        <li>Targeted media outreach</li>
+                        <li>Blog and influencer outreach</li>
+                        <li>Book review solicitation</li>
+                        <li>Award submission strategy</li>
+                        <li>Interview preparation</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who want to build credibility through media features and become recognized in their field.</p>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">06</span>
+                    <div class="service-icon">📧</div>
+                    <h3>Email Marketing for Authors</h3>
+                    <p class="service-tagline">"Build the most valuable asset in your author business."</p>
+                    <p>Build, grow, and nurture an email list that becomes your most powerful marketing tool — the only audience you truly own and your most direct connection to readers.</p>
+                    <ul class="service-features">
+                        <li>Email platform setup and optimization</li>
+                        <li>Lead magnet strategy and creation</li>
+                        <li>Welcome and nurture sequences</li>
+                        <li>Book launch email sequences</li>
+                        <li>Newsletter content strategy</li>
+                        <li>List growth tactics</li>
+                        <li>Segmentation and personalization</li>
+                        <li>Analytics and A/B testing</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who don't have an email list yet or want to grow and better engage their existing subscribers.</p>
+                    </div>
+                </div>
+
+                <!-- Service 7 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">07</span>
+                    <div class="service-icon">🎯</div>
+                    <h3>Amazon Optimization & Book Sales</h3>
+                    <p class="service-tagline">"Make the most of the world's largest bookstore."</p>
+                    <p>Optimize every aspect of your Amazon presence — from your listing to your advertising — to maximize discoverability and sales on the platform where most book purchases happen.</p>
+                    <ul class="service-features">
+                        <li>Book description copywriting</li>
+                        <li>Backend keyword optimization</li>
+                        <li>Category selection and optimization</li>
+                        <li>Author Central profile setup</li>
+                        <li>Review generation strategy</li>
+                        <li>Amazon advertising campaigns</li>
+                        <li>Price promotion planning</li>
+                        <li>Multi-format strategy</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors whose books aren't getting visibility on Amazon or who want to improve their sales performance.</p>
+                    </div>
+                </div>
+
+                <!-- Service 8 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">08</span>
+                    <div class="service-icon">💻</div>
+                    <h3>Author Website & Online Presence</h3>
+                    <p class="service-tagline">"Your digital home base — working for you 24/7."</p>
+                    <p>Create a professional, conversion-optimized author website that serves as the central hub of your online presence — where readers discover you, explore your books, and connect with you.</p>
+                    <ul class="service-features">
+                        <li>Website strategy and planning</li>
+                        <li>Content for all essential pages</li>
+                        <li>SEO optimization</li>
+                        <li>Email opt-in integration</li>
+                        <li>Blog content strategy</li>
+                        <li>Mobile responsiveness</li>
+                        <li>Conversion optimization</li>
+                        <li>Google Analytics setup</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who don't have a website yet or have one that's outdated and underperforming.</p>
+                    </div>
+                </div>
+
+                <!-- Service 9 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">09</span>
+                    <div class="service-icon">🎓</div>
+                    <h3>Author Coaching & Mentorship</h3>
+                    <p class="service-tagline">"One-on-one guidance from someone who understands your journey."</p>
+                    <p>Personalized coaching for authors who want to learn the strategies, develop the skills, and build the confidence to market their own books effectively.</p>
+                    <ul class="service-features">
+                        <li>Regular one-on-one coaching calls</li>
+                        <li>Personalized strategy development</li>
+                        <li>Real-time problem solving</li>
+                        <li>Accountability and progress tracking</li>
+                        <li>Email support between sessions</li>
+                        <li>Resource and tool recommendations</li>
+                        <li>VIP Intensive Day options</li>
+                        <li>Group mastermind programs</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who want to learn to market their own books with ongoing guidance and accountability.</p>
+                    </div>
+                </div>
+
+                <!-- Service 10 -->
+                <div class="service-card fade-in">
+                    <span class="service-number">10</span>
+                    <div class="service-icon">💰</div>
+                    <h3>Book Monetization & Revenue Strategy</h3>
+                    <p class="service-tagline">"Your book is just the beginning — explore what's possible."</p>
+                    <p>Discover and develop additional revenue streams that your book can create — from courses and coaching to consulting, digital products, and strategic partnerships.</p>
+                    <ul class="service-features">
+                        <li>Revenue opportunity assessment</li>
+                        <li>Online course creation strategy</li>
+                        <li>Coaching/consulting development</li>
+                        <li>Digital product creation</li>
+                        <li>Workshop planning</li>
+                        <li>Corporate and bulk sales strategy</li>
+                        <li>Sales funnel development</li>
+                        <li>Financial goal setting</li>
+                    </ul>
+                    <div class="service-ideal">
+                        <h5>Ideal For</h5>
+                        <p>Authors who want to build a business around their book and explore income beyond royalties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROCESS SECTION
+    ============================================ -->
+    <section class="process-section light-section section-padding-large" id="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">How We Work Together</span>
+                <h2>A Proven Step-by-Step Approach</h2>
+                <div class="decorative-line"></div>
+                <p>Every successful author project follows this proven framework, customized to your unique needs.</p>
+            </div>
+
+            <div class="process-timeline">
+                <div class="process-step fade-in">
+                    <div class="process-number">01</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">🔍</div>
+                        <h3>Discover</h3>
+                        <p class="step-subtitle">Understanding Your Unique Story</p>
+                        <p>Everything starts with listening. I dive deep into understanding your book, your goals, your challenges, your audience, and your vision. I analyze your current marketing efforts and identify opportunities. This understanding is the foundation of everything we build together.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">02</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">📐</div>
+                        <h3>Design</h3>
+                        <p class="step-subtitle">Crafting Your Custom Strategy</p>
+                        <p>Based on our discovery, I design a comprehensive, customized strategy built specifically for you. Every tactic is chosen with intention. Every channel is selected based on where YOUR readers are. Every milestone is set based on YOUR goals.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">03</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">🏗️</div>
+                        <h3>Build</h3>
+                        <p class="step-subtitle">Creating Your Marketing Foundation</p>
+                        <p>Before promoting, we ensure your foundation is solid — optimizing your website, setting up email marketing, creating your media kit, polishing social profiles, and optimizing your Amazon listing. A strong foundation makes every effort more effective.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">04</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">🚀</div>
+                        <h3>Execute</h3>
+                        <p class="step-subtitle">Bringing Your Strategy to Life</p>
+                        <p>We implement your strategy with care and purpose. Whether launching a book, building visibility, or creating ongoing marketing systems, every action is deliberate. I'm with you every step, guiding and supporting.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">05</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">📊</div>
+                        <h3>Measure</h3>
+                        <p class="step-subtitle">Tracking What Matters</p>
+                        <p>I track important metrics — sales trends, email growth, social media engagement, website traffic, and more. Regular reports show what's working, what needs adjustment, and where opportunities exist.</p>
+                    </div>
+                </div>
+
+                <div class="process-step fade-in">
+                    <div class="process-number">06</div>
+                    <div class="process-step-content">
+                        <div class="step-icon">🔄</div>
+                        <h3>Optimize</h3>
+                        <p class="step-subtitle">Continuous Improvement</p>
+                        <p>Good strategies evolve. As we learn what resonates with your audience, I refine and optimize your approach. We lean into what works, adjust what doesn't, and explore new opportunities as they arise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RESULTS & APPROACH SECTION
+    ============================================ -->
+    <section class="results-section dark-section section-padding-large" id="results">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">What To Expect</span>
+                <h2>What You Can Expect When Working With Me</h2>
+                <div class="decorative-line"></div>
+                <p>Honest expectations and a genuine commitment to your growth</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card fade-in">
+                    <div class="result-icon">📈</div>
+                    <h4>Clear, Custom Strategy</h4>
+                    <p>No guesswork, no generic plans — a detailed marketing roadmap built specifically for your book and goals.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">📚</div>
+                    <h4>Improved Book Visibility</h4>
+                    <p>More readers discovering your book through strategic, multi-channel marketing efforts.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">🎙️</div>
+                    <h4>Media Opportunities</h4>
+                    <p>Strategic outreach to relevant platforms, blogs, and publications that align with your audience.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">📧</div>
+                    <h4>Email List Growth</h4>
+                    <p>Building your most valuable marketing asset — a list of engaged, interested readers.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">📱</div>
+                    <h4>Purposeful Social Media</h4>
+                    <p>Content strategy that connects with readers and supports your book sales — not random posting.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">🎯</div>
+                    <h4>Optimized Amazon Presence</h4>
+                    <p>Better discoverability, compelling listings, and strategic positioning on the world's largest bookstore.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">🌟</div>
+                    <h4>Stronger Author Brand</h4>
+                    <p>Clear positioning, consistent messaging, and an authentic brand that resonates with your audience.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">🤝</div>
+                    <h4>Dedicated Partnership</h4>
+                    <p>A committed partner who treats your book with care and is genuinely invested in your success.</p>
+                </div>
+                <div class="result-card fade-in">
+                    <div class="result-icon">📊</div>
+                    <h4>Measurable Progress</h4>
+                    <p>Regular tracking, transparent reporting, and data-informed decisions at every stage.</p>
+                </div>
+            </div>
+
+            <div class="results-commitment fade-in">
+                <h3>My Commitment to You</h3>
+                <p>I don't make wild promises about overnight success. What I DO promise: I will bring my full expertise, dedication, and passion to your project. I will create strategy based on proven principles. I will be honest about what's working and what needs to change. And I will be your committed partner in building the author visibility you deserve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIALS SECTION
+    ============================================ -->
+    <section class="testimonials-section light-section section-padding-large" id="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Testimonials</span>
+                <h2>What Authors Say About Working With Me</h2>
+                <div class="decorative-line"></div>
+                <p>Real feedback from authors I've had the privilege of working with</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Before working with Margaret, I felt completely lost when it came to marketing my book. She took the time to understand my book and goals, and created a clear, actionable plan I could actually follow. Within a few months, I started seeing real results — more visibility, a growing email list, and consistent book sales. Margaret gave me the clarity and confidence I was missing.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">S</div>
+                        <div class="testimonial-author-info">
+                            <h5>Satisfied Author Client</h5>
+                            <span>Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Margaret was the first marketing consultant who truly understood the author space. She didn't give me generic advice — she created a strategy specifically for my genre and audience. My Amazon listing improved significantly, and for the first time, I felt like I had a real marketing system in place. Margaret is knowledgeable, responsive, and genuinely cares.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">N</div>
+                        <div class="testimonial-author-info">
+                            <h5>Non-Fiction Author Client</h5>
+                            <span>Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>As a first-time author, I had no idea where to start with marketing. Margaret made the entire process feel manageable. She broke everything down into clear steps, helped me build my brand from scratch, and guided me through my book launch with patience and expertise. My launch went better than I ever expected.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">D</div>
+                        <div class="testimonial-author-info">
+                            <h5>Debut Author Client</h5>
+                            <span>First-Time Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>I published my book two years ago and it was barely selling. Margaret showed me it's never too late. She refreshed my entire marketing approach — rewrote my book description, optimized my Amazon listing, helped me build an email list, and created a social media strategy that made sense. My sales improved significantly.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">S</div>
+                        <div class="testimonial-author-info">
+                            <h5>Self-Published Author Client</h5>
+                            <span>Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>What I appreciate most about Margaret is her honesty. She didn't promise me the moon — she told me exactly what was realistic and then helped me exceed those expectations through hard work and smart strategy. She's strategic, creative, and genuinely invested in her clients' success.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">T</div>
+                        <div class="testimonial-author-info">
+                            <h5>Author & Thought Leader Client</h5>
+                            <span>Non-Fiction Author</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card fade-in">
+                    <div class="quote-icon">"</div>
+                    <div class="stars">★★★★★</div>
+                    <p>Margaret helped me understand that marketing isn't just about selling books — it's about building relationships with readers. That shift changed everything. She helped me develop my author brand, create engaging content, and build a community. I now have readers who actively look forward to my next book.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-author-avatar">F</div>
+                        <div class="testimonial-author-info">
+                            <h5>Fiction Author Client</h5>
+                            <span>Author</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         WHY CHOOSE ME SECTION
+    ============================================ -->
+    <section class="why-section dark-section section-padding-large" id="why">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Why Me</span>
+                <h2>Why Authors Choose to Work With Me</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="why-grid">
+                <div class="why-card fade-in">
+                    <div class="why-icon">🎯</div>
+                    <div>
+                        <h4>Author-Exclusive Focus</h4>
+                        <p>I work exclusively with authors and books. Every strategy is specifically designed for the unique challenges of the publishing world.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🧬</div>
+                    <div>
+                        <h4>100% Custom Strategies</h4>
+                        <p>No templates. No one-size-fits-all. Every strategy is built from scratch based on YOUR unique book, audience, and goals.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">📊</div>
+                    <div>
+                        <h4>Data-Informed Decisions</h4>
+                        <p>Recommendations based on research, data, and experience. I track meaningful metrics and use that information to optimize your strategy.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🤝</div>
+                    <div>
+                        <h4>True Partnership</h4>
+                        <p>I'm a dedicated partner who treats your book with care. I'm emotionally invested in your success because I genuinely care.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🔍</div>
+                    <div>
+                        <h4>Honest & Transparent</h4>
+                        <p>I set realistic expectations from day one. I won't promise overnight success — I'll deliver proven strategies and dedicated effort.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🔄</div>
+                    <div>
+                        <h4>Long-Term Vision</h4>
+                        <p>I help you build a sustainable author career, not just market one book. Every strategy considers your future growth.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">❤️</div>
+                    <div>
+                        <h4>Genuine Passion</h4>
+                        <p>I believe every great book deserves to be read. That passion drives everything I do and shows in the quality I deliver.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🌐</div>
+                    <div>
+                        <h4>Current Industry Knowledge</h4>
+                        <p>I stay current with trends, algorithm changes, and innovations. You always get strategies that reflect what's working NOW.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">📚</div>
+                    <div>
+                        <h4>Holistic Approach</h4>
+                        <p>I see how your website, email, social media, Amazon, and media coverage work together. Aligned elements create stronger results.</p>
+                    </div>
+                </div>
+                <div class="why-card fade-in">
+                    <div class="why-icon">🎓</div>
+                    <div>
+                        <h4>Commitment to Growth</h4>
+                        <p>I continuously invest in my own education and professional development so my clients always benefit from the most effective methods.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FAQ SECTION
+    ============================================ -->
+    <section class="faq-section light-section section-padding-large" id="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">FAQ</span>
+                <h2>Frequently Asked Questions</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>Who do you work with?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>I work with authors at every stage — from first-time writers to established authors. I work across all genres including non-fiction, fiction, self-help, business, memoir, children's books, and more. I work with both self-published and traditionally published authors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>How much do your services cost?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Every author's needs are different, so I provide custom quotes based on the specific services and scope of work. I invite you to book a free strategy call where we can discuss your goals and I'll recommend the best approach for your situation and budget.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>How long does it take to see results?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>This depends on your starting point and the strategies we implement. Some tactics produce results relatively quickly, while sustainable long-term growth typically takes 3-6 months of consistent effort. I always set honest expectations and provide regular progress updates.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>Can you help me if my book is already published?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Absolutely! It's never too late to market your book. A fresh strategy can bring renewed visibility and sales to any book, regardless of when it was published. Some of my most impactful work has been with previously published books.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>Do you offer one-on-one coaching?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes! I offer both coaching (where I teach you to market your own book) and done-for-you services (where I handle the marketing). We'll determine the best fit during our strategy call.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>What makes you different from other book marketing experts?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>I specialize exclusively in author marketing, create 100% custom strategies (no templates), am committed to long-term success, and set honest expectations. I'm a genuine partner in your journey, not just a service provider.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>Do you guarantee results?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>No ethical marketer can guarantee specific sales numbers. What I guarantee is proven strategies, dedicated effort, honest communication, and my full expertise applied to your project. My client feedback speaks to the quality of results I help authors achieve.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>Do you work with international authors?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Yes! I work with authors worldwide. All coaching and consulting is conducted virtually, so location is never a barrier.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>What if I'm not sure which service I need?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>That's exactly what the free strategy call is for! I'll learn about your situation and recommend the approach that makes the most sense. No obligation — just a helpful conversation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <h4>How do I get started?</h4>
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <p>Simply book a free strategy call using the button on this page. We'll have a conversation about your book, your goals, and how I can help. From there, I'll provide a custom recommendation. Easy and pressure-free.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FREE RESOURCES SECTION
+    ============================================ -->
+    <section class="resources-section dark-section section-padding-large" id="resources">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Free Resources</span>
+                <h2>Free Resources for Authors</h2>
+                <div class="decorative-line"></div>
+                <p>Start improving your book marketing today with these free tools and guides</p>
+            </div>
+
+            <div class="resources-grid">
+                <div class="resource-card fade-in">
+                    <div class="resource-icon">📘</div>
+                    <h3>The Author Visibility Blueprint</h3>
+                    <p>A comprehensive free guide revealing proven strategies for making your book visible, building your author brand, and growing your readership. The same framework I use with private clients.</p>
+                    <a href="#" class="btn-resource">Download Free Guide</a>
+                </div>
+                <div class="resource-card fade-in">
+                    <div class="resource-icon">📋</div>
+                    <h3>The Book Launch Checklist</h3>
+                    <p>A detailed checklist covering everything you need to do before, during, and after your book launch. Never miss a critical step again.</p>
+                    <a href="#" class="btn-resource">Get Free Checklist</a>
+                </div>
+                <div class="resource-card fade-in">
+                    <div class="resource-icon">📧</div>
+                    <h3>Weekly Author Marketing Tips</h3>
+                    <p>Join authors who receive my weekly email with actionable marketing tips, industry insights, and helpful resources delivered every Tuesday.</p>
+                    <a href="#" class="btn-resource">Subscribe Free</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         BLOG SECTION
+    ============================================ -->
+    <section class="blog-section light-section section-padding-large" id="blog">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Blog</span>
+                <h2>The Author Visibility Blog</h2>
+                <div class="decorative-line"></div>
+                <p>Practical strategies and insights to help you market your book and grow your author career</p>
+            </div>
+
+            <div class="blog-grid">
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Book Marketing</span>
+                        <h3>A Practical Guide to Marketing Your Book</h3>
+                        <p>Everything you need to know about creating a marketing strategy that works for your book and your audience.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Author Branding</span>
+                        <h3>How to Build an Author Brand That Connects With Readers</h3>
+                        <p>Your brand is more than a logo. Learn how to create an authentic author brand that resonates.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Book Launches</span>
+                        <h3>Book Launch Planning: What Every Author Needs to Know</h3>
+                        <p>A comprehensive look at planning and executing a book launch that builds real momentum.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Amazon</span>
+                        <h3>Understanding Amazon Ads for Authors</h3>
+                        <p>A beginner-friendly guide to Amazon advertising and how to use it to increase your book's visibility.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Email Marketing</span>
+                        <h3>Email Marketing for Authors: Getting Started</h3>
+                        <p>Why every author needs an email list and how to build one from scratch — even with zero subscribers.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-card fade-in">
+                    <div class="blog-card-image">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="blog-card-content">
+                        <span class="blog-category">Social Media</span>
+                        <h3>Social Media for Authors: Choosing the Right Platforms</h3>
+                        <p>Not all platforms are created equal. Learn which social media channels actually matter for YOUR genre.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="blog-view-all fade-in">
+                <a href="#" class="btn-primary">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+    ============================================ -->
+    <section class="contact-section dark-section section-padding-large" id="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Get In Touch</span>
+                <h2>Let's Talk About Your Book</h2>
+                <div class="decorative-line"></div>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-info fade-in-left">
+                    <h3>Ready to Take the Next Step?</h3>
+                    <p class="contact-subtitle">Your free strategy call is just a click away.</p>
+                    <p>Book your free strategy call today. In 30 minutes, we'll discuss your book, your goals, and your challenges — and I'll share actionable advice you can use right away, whether we work together or not.</p>
+
+                    <div class="contact-expectations">
+                        <h4>What to Expect</h4>
+                        <ul>
+                            <li>A warm, pressure-free conversation about your author journey</li>
+                            <li>An honest assessment of your current marketing situation</li>
+                            <li>Practical suggestions you can implement right away</li>
+                            <li>A clear recommendation for your next best step</li>
+                            <li>An overview of how I can help (if it's the right fit)</li>
+                        </ul>
+                    </div>
+
+                    <div class="contact-direct">
+                        <h4>Direct Contact</h4>
+                        <div class="contact-direct-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:margaretlawson004@gmail.com"><span>margaretlawson004@gmail.com</span></a>
+                        </div>
+
+                        <div class="contact-social">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper fade-in-right">
+                    <h3>Book Your Free Strategy Call</h3>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fullName">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="Your email address" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone (Optional)</label>
+                                <input type="tel" id="phone" name="phone" placeholder="Your phone number">
+                            </div>
+                            <div class="form-group">
+                                <label for="website">Website (Optional)</label>
+                                <input type="url" id="website" name="website" placeholder="Your website URL">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookTitle">Book Title</label>
+                                <input type="text" id="bookTitle" name="bookTitle" placeholder="Your book title (if applicable)">
+                            </div>
+                            <div class="form-group">
+                                <label for="genre">Genre</label>
+                                <input type="text" id="genre" name="genre" placeholder="Your book's genre">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="publishingStatus">Publishing Status</label>
+                            <select id="publishingStatus" name="publishingStatus">
+                                <option value="" disabled selected>Select your current status</option>
+                                <option value="writing">Still Writing</option>
+                                <option value="manuscript">Manuscript Complete</option>
+                                <option value="prelaunch">Pre-Launch (Publication date set)</option>
+                                <option value="recent">Recently Published (within 6 months)</option>
+                                <option value="published">Published (6+ months ago)</option>
+                                <option value="multiple">Multiple Books Published</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="challenges">Your Biggest Marketing Challenges</label>
+                            <textarea id="challenges" name="challenges" placeholder="Tell me about the marketing challenges you're facing..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="goals">Your Goals</label>
+                            <textarea id="goals" name="goals" placeholder="What would you like to achieve with your book/author career?"></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="hearAbout">How Did You Hear About Me?</label>
+                            <select id="hearAbout" name="hearAbout">
+                                <option value="" disabled selected>Select one</option>
+                                <option value="google">Google Search</option>
+                                <option value="social">Social Media</option>
+                                <option value="referral">Referral from Friend/Colleague</option>
+                                <option value="blog">Blog/Article</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn">Book My Free Strategy Call</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="footer-logo">Margaret Lawson</div>
+                    <div class="footer-logo-tagline">Book Marketing & Author Visibility Expert</div>
+                    <p>Helping authors build visibility, connect with readers, and create sustainable author careers through proven marketing strategies and genuine partnership.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#resources">Free Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Book Marketing Strategy</a></li>
+                        <li><a href="#services">Author Branding</a></li>
+                        <li><a href="#services">Book Launch Strategy</a></li>
+                        <li><a href="#services">Social Media Marketing</a></li>
+                        <li><a href="#services">Media & PR</a></li>
+                        <li><a href="#services">Email Marketing</a></li>
+                        <li><a href="#services">Amazon Optimization</a></li>
+                        <li><a href="#services">Author Coaching</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Stay Connected</h4>
+                    <div class="footer-newsletter">
+                        <p>Get weekly author marketing tips delivered to your inbox.</p>
+                        <form class="footer-newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit">Join</button>
+                        </form>
+                    </div>
+                    <div style="margin-top: 25px;">
+                        <div class="contact-direct-item">
+                            <i class="fas fa-envelope" style="color: var(--secondary-gold); font-size: 0.8rem;"></i>
+                            <a href="mailto:margaretlawson004@gmail.com" style="font-size: 0.8rem; color: rgba(240, 236, 228, 0.5);">margaretlawson004@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Margaret Lawson | Book Marketing & Author Visibility Expert | All Rights Reserved</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         BACK TO TOP BUTTON
+    ============================================ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- ============================================
+         JAVASCRIPT
+    ============================================ -->
+    <script>
+        // Preloader
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Mobile menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', function() {
+            this.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when link clicked
+        document.querySelectorAll('.nav-links a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(function(question) {
+            question.addEventListener('click', function() {
+                const faqItem = this.parentElement;
+                const answer = faqItem.querySelector('.faq-answer');
+                const isActive = faqItem.classList.contains('active');
+
+                // Close all FAQs
+                document.querySelectorAll('.faq-item').forEach(function(item) {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-answer').style.maxHeight = '0';
+                });
+
+                // Open clicked FAQ if it wasn't already open
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                }
+            });
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your interest! Your request for a free strategy call has been received. Margaret will be in touch within 24-48 hours.');
+            this.reset();
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const navHeight = document.getElementById('navbar').offsetHeight;
+                    const targetPosition = target.offsetTop - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
